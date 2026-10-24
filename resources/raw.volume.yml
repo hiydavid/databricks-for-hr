@@ -1,0 +1,8 @@
+resources:
+  volumes:
+    raw:
+      catalog_name: ${var.catalog}
+      schema_name: ${resources.schemas.aita.name}
+      name: raw
+      volume_type: MANAGED
+      comment: Synthetic HR source files written by the generator, one folder per dataset.

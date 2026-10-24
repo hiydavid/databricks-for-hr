@@ -1,0 +1,20 @@
+bundle:
+  name: aita
+
+include:
+  - resources/*.yml
+
+variables:
+  catalog:
+    description: Existing Unity Catalog catalog that holds the Aita schema
+    default: genie_workbench_dev_catalog
+  schema:
+    description: Schema for all Aita tables, views, functions, volumes and models
+    default: aita
+
+targets:
+  dev:
+    default: true
+    workspace:
+      profile: genie-workbench
+      root_path: /Workspace/Users/${workspace.current_user.userName}/.bundle/${bundle.name}/${bundle.target}

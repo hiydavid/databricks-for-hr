@@ -1,0 +1,20 @@
+# Planning docs, not part of the submission
+aita-design-doc.pdf
+PLAN.md
+
+# Databricks bundle state
+.databricks/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+.pytest_cache/
+
+# Node
+node_modules/
+dist/
+
+# Local env and OS files
+.env
+.DS_Store

@@ -1,0 +1,6 @@
+resources:
+  schemas:
+    aita:
+      catalog_name: ${var.catalog}
+      name: ${var.schema}
+      comment: Aita (AI Talent Advisor) synthetic HR data for a fictional bank. bronze_* and silver_* tables are pipeline internals; dimensions, facts, metric views, the ML feature table and attrition risk scores are the governed surface for Genie Agents and the Aita app.
