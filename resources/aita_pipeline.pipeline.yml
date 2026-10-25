@@ -1,0 +1,18 @@
+resources:
+  pipelines:
+    aita_pipeline:
+      name: aita_sdp_pipeline
+      catalog: ${var.catalog}
+      schema: ${var.schema}
+      serverless: true
+      continuous: false
+      photon: true
+      root_path: ../src/pipeline
+      libraries:
+        - glob:
+            include: ../src/pipeline/**
+      configuration:
+        raw_volume: /Volumes/${var.catalog}/${var.schema}/raw
+      tags:
+        project: aita
+        phase: "2"
